@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto+Slab:wght@100&family=Signika+Negative:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>App De Tareas</title>
+</head>
+
+<body>
+    <Button id="btnModal"><i class="ri-computer-line"></i></Button>
+    <section class="contain-modal">
+        <div class="modal">
+            <button id="btnClose">X</button>
+            <div class="modal-title">
+                <h1>Bienvenidas!! Comencemos A Trabajar...</h1>
+            </div>
+        </div>
+    </section>
+    <header>
+        <div class="head-continer">
+            <div class="title">
+                <h1>To Do App</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="sun">
+            <i class="ri-sun-fill sun" id="sun"></i>
+        </div>
+
+        <div class="modal-change-continer">
+            <form class="change-form">
+                <p class="change-continer-p"><strong>Debe seleccionar en que contenedor desea colocar la tarea</strong></p>
+                <select id="change">
+                    <option value="" disable selected>Seleccinar Estado</option>
+                    <option value=2>En Progreso</option>
+                    <option value=3>Terminado</option>
+                </select>
+                <span id="changeStateErrors"></span>
+                <button class="btn-poppup" type="submit">Aceptar</button>
+            </form>
+            <span id="changeFormErrors"></span>
+        </div>
+
+        <div class="modal-edit-continer">
+            <div class="form-edit">
+                <form id="form-edit2">
+                    <input id="input2" type="text" placeholder="Ingreso Tarea">
+                    <span id="editInputErrors"></span>
+                    <div>
+                        <select id="state2">
+                            <option value="" disable selected>Seleccinar Estado</option>
+                            <option value=1>Pendiente</option>
+                            <option value=2>En Progreso</option>
+                            <option value=3>Terminado</option>
+                        </select>
+                        <span id="editStateErrors"></span>
+                        <input id="IdParaCambiar" type="hidden" value="">
+                    </div>
+                    <button class="btn-edit" type="submit">Agregar</button>
+                </form>
+                <span id="editFormErrors"></span>
+            </div>
+        </div>
+
+        <form id="form-text">
+            <input id="input" type="text" placeholder="Ingreso Tarea">
+            <span id="inputErrors"></span>
+            <div>
+                <select id="state">
+                    <option value="" disable selected>Seleccinar Estado</option>
+                    <option value=1>Pendiente</option>
+                    <option value=2>En Progreso</option>
+                    <option value=3>Terminado</option>
+                </select>
+                <span id="stateErrors"></span>
+            </div>
+            <button class="btn" type="submit">Agregar</button>
+        </form>
+        <span id="formErrors"></span>        
+
+        <div class="continer">
+            <section id="task-continer">
+                <h4>PENDIENTE</h4>
+                <div id="lista-tarea"></div>
+            </section>
+
+            <section id="progresoContenedor" class="progress-continer">
+                <h4>EN PROGRESO</h4>
+                <div id="lista-progreso"></div>
+            </section>
+
+            <section class="done-continer">
+                <h4>TERMINADO</h4>
+                <div id="lista-terminado"></div>
+            </section>
+    </main>
+
+    <footer>
+        Todos los derechos reservados
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

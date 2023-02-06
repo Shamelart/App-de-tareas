@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto+Slab:wght@100&family=Signika+Negative:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle at 49.08% 39.49%, #d8fffd 0,
+            #c1faf7 10%, #a8f0f2 20%, #89e4ee 30%, #64d7ea 40%, #28c8e7 50%,
+            #00b9e5 60%, #00aae4 70%, #009de4 80%, #0090e4 90%, #0084e3 100%);
+
+}
+
+body #btnModal {
+    background-color: rgb(133, 205, 200);
+    width: 3em;
+    height: 3em;
+    border-color: rgb(112, 187, 216);
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+body #btnModal i {
+    font-size: 2em;
+}
+
+body .contain-modal {
+    height: 100vh;
+    position: fixed;
+    display: none;
+}
+
+body .contain-modal .modal {
+    height: 30rem;
+    width: 30rem;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px pink solid;
+    position: absolute;
+    top: 10%;
+    left: 500px;
+    text-align: center;
+    box-shadow: 0 0 15px 0 grey;
+    background-image: url(./imagenes/workFromHome.jpg);
+    background-size: 100%;
+
+}
+
+.show-modal {
+    display: block !important;
+}
+
+.show-modal-change-continer {
+    display: block !important;
+}
+
+.show-modal-edit-continer {
+    display: block !important;
+}
+
+.modal-change-continer .change-form .change-continer-p {
+    padding-top: 1em;
+    font-size: 18px
+}
+
+.modal-change-continer #change,
+.btn-poppup {
+    padding: 5px;
+    border-radius: 5px;
+    border: #e760c3 solid;
+    font-size: 15px;
+    margin-top: 1.5em;
+}
+
+.modal-change-continer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    height: 10em;
+    background: #f08bd5;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;   /* POSITION ABSOLUTE PARA NO OCUPAR EL ESPACIO  */
+    top: 250px;     /* MODIFICAR ACA PARA MEJORAR */
+    left: 500px;    /* MODIFICAR ACA PARA MEJORAR */
+    display: none;    
+}
+
+.modal-edit-continer {
+    width: 30%;
+    height: 14em;
+    background: #f08bd5;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;    /* POSITION ABSOLUTE PARA NO OCUPAR EL ESPACIO  */
+    right: 500px;    /* CAMBIE A NUMEROS POSITIVOS */
+    bottom: 300px;    /* CAMBIE A NUMEROS POSITIVOS */
+    display: none;
+    z-index: 9999;
+}
+
+.modal-edit-continer .form-edit #form-edit2 #input2{
+    width: 25em;
+    height: 2.3em;
+    text-align: center;
+    margin-top: 2em;
+    border-radius: 5px;
+}
+
+.modal-edit-continer .form-edit #form-edit2 #state2 {
+    width: 18em;
+    height: 2.3em;
+    text-align: center;
+    margin-top: 3em;
+    border-radius: 5px;
+}
+
+.modal-edit-continer .form-edit #form-edit2 .btn-edit {
+    width: 10em;
+    height: 2.3em;
+    text-align: center;
+    margin-top: 3em;
+    border-radius: 5px;
+}
+
+.dark {
+    background: black;
+
+}
+
+.sun i {
+    position: relative;
+    left: 1200px;
+    top: 10px;
+    color: yellow;
+    font-size: 1.8em;
+}
+
+.ri-moon-clear-fill {
+    position: relative;
+    left: 1200px;
+    top: 80px;
+    color: yellow;
+    font-size: 1.8em;
+}
+
+.head-continer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80%;
+
+}
+
+
+
+#form-text {
+    display: flex;
+    margin-left: 100px;
+}
+
+#form-text #input-task {
+    border-radius: 5px;
+    width: 353px;
+    height: 40px;
+    margin-bottom: 10px;
+
+}
+
+#form-text #state {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+#form-text .btn {
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+#input {
+    width: 28%;
+    height: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.continer {
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    height: 200px;
+    margin: auto;
+}
+
+.continer #task-continer {
+    width: 30%;
+    height: 430px;
+    background-color: rgba(240, 208, 244, 0.657);
+    margin-top: 30PX;
+    padding-top: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.continer #task-continer #lista-tarea {
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+.continer #task-continer #lista-tarea p {
+    width: 100%;
+    margin-right: 6.5em;
+}
+
+.continer #task-continer #lista-tarea image {
+    font-size: 1.3rem;
+}
+
+.ri-pencil-fill {
+    color: blue;
+    font-size: 18px;
+}
+
+.ri-checkbox-circle-fill {
+    color: green;
+    font-size: 18px;
+}
+
+.ri-delete-bin-2-fill {
+    color: red;
+    font-size: 18px;
+}
+
+.contenedor-tarea {
+    display: flex;
+}
+
+.progress-continer {
+    width: 30%;
+    height: 430px;
+    background-color: rgba(228, 177, 234, 0.332);
+    text-align: center;
+    margin-top: 20PX;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+
+.continer .progress-continer #lista-progreso {
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+.continer .progress-continer #lista-progreso p {
+    margin-right: 6.5em;
+}
+
+.continer .progress-continer #lista-progreso image {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: left;
+}
+
+.contenedor-progreso {
+    display: flex;
+}
+
+.done-continer {
+    width: 30%;
+    height: 430px;
+    background-color: rgba(233, 179, 239, 0.281);
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+
+.done-continer #lista-terminado .contenedor-terminado {
+    display: flex;
+}
+
+.continer .done-continer #lista-terminado {
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+.continer .done-continer #lista-terminado p {
+    margin-right: 6.5em;
+}
+
+.continer .done-continer #lista-terminado image {
+    font-size: 1.3rem;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: brown;
+    margin-top: 270px;
+    text-align: center;
+
+
+}
